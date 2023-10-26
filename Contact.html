@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .heading {
+            text-align: center;
+            font-size: 30px;
+            padding: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .img1 {
+            text-align: center;
+            height: 500px;
+            width: 500px;
+            margin-bottom: 5%;
+        }
+        
+        form {
+            margin-bottom: 5%;
+        }
+        
+        @media (max-width: 768px) {
+            .contact {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="heading"> Contact Us</div>
+    <div class="container ">
+        <div class="row contact">
+
+            <div class="col ">
+                <img class="img1 img-fluid cart-product-image-thumbnail" src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg" alt="dummy image">
+
+            </div>
+            <div class="col justify-content-center ">
+                <form>
+                    <div class="mb-3 align-items-center">
+
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter your name">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email address ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message:</label>
+                        <input type="text" class="form-control" id="message" placeholder="Enter your message ">
+                    </div>
+
+                    <div class="d-grid gap-2">
+
+                        <button class="btn btn-success" id="Submit" type="button">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+    <script>
+        fetch("header&footer/header.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            });
+        fetch("header&footer/footer.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
+</body>
+
+</html>

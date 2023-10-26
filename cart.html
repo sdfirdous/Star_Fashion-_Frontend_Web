@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+
+    <body>
+        <div id="header"></div>
+        <div class="container">
+            <div class="row m-5">
+                <!-- part1 -->
+                <div class="col-lg-8 col-md-7 col-sm-12 border ">
+                    <div>
+                        <h4 class="text-center pt-2">Items In Your Cart</h4>
+                    </div>
+                    <hr>
+
+                    <div class="row p-3 m-3">
+
+                        <div class="col-md-4">
+                            <img src="https://m.media-amazon.com/images/I/51nlOhpFzyL._AC_UL600_FMwebp_QL65_.jpg" class="img-fluid cart-product-image-thumbnail" alt="image">
+                        </div>
+
+                        <div class="col-md-5 ">
+                            <h5>Cigarette Pants</h5>
+                            <i class="fa-solid fa-trash"></i>
+
+                        </div>
+
+                        <div class="col-md-3 cart-quantity-form">
+                            <form class="d-flex">
+                                <button type="button" id="number" class="btn btn-dark btn-sm"><i
+                                    class="fas fa-minus"></i></button>
+                                <input type="number" class="form-control mx-2 text-center">
+                                <button type="button" class="btn btn-dark btn-sm"><i
+                                    class="fas fa-plus"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Cart Summary -->
+                <div class="col-lg-4 col-md-6 border border-secondary-subtle cart-product-summary ">
+                    <div>
+                        <h4 class="text-center pt-2 ">Summary
+                            <hr>
+                        </h4>
+                    </div>
+
+                    <div class="card-">
+                        <div class="card-body">
+                            <h6>cost <span class="float-end ">&#8377; 15$</span></h6>
+                            <h6>Shipping<span class="float-end">&#8377; 5$</span></h6>
+                            <hr>
+                            <h4>Total<span class="float-end">&#8377; 20$</span></h4>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button class="btn btn-outline-success">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="footer"></div>
+        <script>
+            fetch("header&footer/header.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("header").innerHTML = html;
+                });
+            fetch("header&footer/footer.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                });
+        </script>
+
+    </body>
+
+
+</html>

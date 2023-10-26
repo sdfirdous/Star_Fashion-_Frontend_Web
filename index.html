@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <style>
+        .body1 {
+            background-color: rgb(220, 236, 131);
+        }
+        /* section one cover image  */
+        
+        .cover-image {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url("https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg") no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* company name  */
+        
+        .h1-1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 100px;
+            color: rgb(24, 24, 133);
+        }
+        /* company slogan */
+        
+        .slogan {
+            font-family: cursive;
+            font-style: italic;
+            color: rgb(8, 8, 22);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-top: 5px;
+            font-size: 50px;
+        }
+        /* featured product section */
+        
+        .section-h {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #badb58;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+        
+        @media (max-width: 768px) {
+            .slogan {
+                font-size: 30px;
+            }
+            .h1-1 {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 60px;
+                color: rgb(24, 24, 133);
+                max-width: 150px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #featured {
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #badb58;
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+        }
+        /* ============================== */
+        /* Seconde Part Styling */
+        
+        .card img {
+            width: 100%;
+            height: 450px;
+        }
+        
+        .card {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #0a0909;
+        }
+    </style>
+</head>
+
+<body class="body1">
+    <a href=""></a>
+    <div id="header"></div>
+    <div id="home"></div>
+    <div id="footer"></div>
+
+    <script>
+        fetch("./header&footer/header.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            });
+
+        fetch("./home.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("home").innerHTML = html;
+            });
+        fetch("./header&footer/footer.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
+</body>
+
+</html>
